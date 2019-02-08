@@ -7,10 +7,10 @@ export LD_LIBRARY_PATH := $(HOST_LIB)
 all: cast1.o cast2.o
 
 cast1.o: cast.cpp
-	$(CXX_1) $^ -o $@
+	$(CXX_1) $^ --verbose -o $@
 
 cast2.o: cast.cpp
-	$(CXX_2) $^ -o $@
+	$(CXX_2) $^ --verbose -o $@
 
 clean:
 	rm -f cast1.o cast2.o
